@@ -71,10 +71,7 @@ Route::get('/user6/profile', [UserController::class, 'show'])->name('profile.use
 
 
 // Acara 4
-//generate route ke route bersama
-// Route::get('/user/{id}/profile', function ($id) {
-//     return view('profile', ['id' => $id]);
-// })->name('profile');
+
 Route::get('/redirect-profile', function () {
     return redirect()->route('profile', ['id' => 1, 'photos' => 'yes']);
 });
